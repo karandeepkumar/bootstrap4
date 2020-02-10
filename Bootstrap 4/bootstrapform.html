@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<title>Bootstrap Form</title>
+</head>
+<body class="bg-light">
+<div class="container">
+	<div class="row">
+		<div class="col-sm">
+			<h2 class="text-center text-primary">Registration Form</h2><br>
+			<form action="/action_page.php" class="was-validated">
+			  	<div class="form-group">
+				    <label>Email:</label>
+				    <input type="email" class="form-control" id="uname" placeholder="Enter email"
+				           required>
+				    <div class="valid-feedback">Valid</div>
+				    <div class="invalid-feedback">Please fill out this field.</div>
+			  	</div>
+				<div class="form-group">
+				    <label for="pwd">Password:</label>
+				    <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd" required>
+				    <div class="valid-feedback">Valid</div>
+				    <div class="invalid-feedback">Please fill out this field.</div>
+				</div>
+				<div class="form-group form-check">
+				    <label class="form-check-label">
+				    <input class="form-check-input" type="checkbox" name="remember" required> I 
+				           agree on terms and conditions.
+				    <div class="valid-feedback">Valid</div>
+				    <div class="invalid-feedback">Check this checkbox to continue.</div>
+				    </label>
+				</div>
+			  		<button type="submit" class="btn btn-primary">Submit</button>
+			</form>
+
+<!------------- ---Table Area-----------------------------
+ -->		<div class="table-responsive-sm">
+		<h2 class="text-center text-primary">Our Registered Users</h2><br>
+		<table class=" table table-bordered table-hover">
+			<thead class="text-center thead-dark">
+				<th>Name</th>
+				<th>Email Id</th>
+				<th>Contact</th>
+				<th>Country</th>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Karandeep</td>
+					<td>Karandeep.poddar@gmail.com</td>
+					<td>7508854980</td>
+					<td>India</td>
+				</tr>
+				<tr>
+					<td>Ramesh</td>
+					<td>ramesh.kumar@gmail.com</td>
+					<td>808854980</td>
+					<td>India</td>
+				</tr>
+				<tr>
+					<td>Suresh</td>
+					<td>suresh.poddar@gmail.com</td>
+					<td>9508854980</td>
+					<td>India</td>
+				</tr>
+			</tbody>
+		</table>
+		</div>
+		</div>
+	</div>
+	
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script>
+	$(document).ready(function(){
+		$("form").submit(function(){
+			
+				let name=document.getElementById("myname").value;
+				let email=document.getElementById("myemail").value;
+				let pass=document.getElementById("mypass").value;
+
+				if(name="  "){
+						alert("Please fill Name field");
+						return false;
+						 }
+				else{
+						return true;
+				}
+				if(email="   "){
+						alert("Please fill Email field");
+						
+							}
+				if(pass="  "){
+						alert("Please fill Pass field");
+												}
+						
+			
+		});
+	});
+</script>
+
+
+
+
+
+</body>
+
+</html>
+
+
